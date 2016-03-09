@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="littleSketcher">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular Little Sketcher</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="http://cdn.foundation5.zurb.com/foundation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+<body>
+
+  <div class="row ng-controller=drawingListCtrl">
+
+    <h1>Drawings</h1>
+
+    <button>Add Drawing</button>
+      {{ drawings }}
+    <ul class="drawings">
+      <li class="note">
+        No drawings yet.
+      </li>
+      <li ng-repeat="drawing in drawings" class="drawing">
+        <span>{{ drawing.name }}</span><button>Remove</button>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- Fake Backend -->
+</body>
+</html>
